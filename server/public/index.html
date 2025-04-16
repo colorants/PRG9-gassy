@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gassy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-red-800 font-sans flex justify-center items-center min-h-screen bg-[url('/miata.jpg')] bg-repeat bg-[length:100px_80px] bg-[position:0_0]">
+
+
+<div id="chatbox" class="w-full max-w-md bg-red-50 border border-red-300 p-6 rounded-xl shadow-lg flex flex-col h-[90vh]">
+    <!-- Header -->
+    <div class="flex items-center justify-center gap-3 mb-4">
+        <img src="/gassy.png" alt="Gassy Logo" class="w-12 h-12 rounded-full border-2 border-red-600" />
+        <h1 class="text-3xl font-bold text-red-700">Gassy the GasBot</h1>
+    </div>
+
+    <!-- Messages (scrollable area) -->
+    <div id="messages" class="flex-1 overflow-y-auto mb-4 space-y-2 p-2 bg-white border border-red-200 rounded-md"></div>
+
+    <!-- Input Area -->
+    <div class="flex gap-2">
+        <input
+                id="input"
+                type="text"
+                placeholder="e.g. What's the gas price in Berlin?"
+                class="flex-1 px-3 py-2 rounded-md border border-red-300 focus:outline-none focus:ring-2 focus:ring-red-500 text-red-900 placeholder-red-400"
+        />
+        <button
+                onclick="sendMessage()"
+                class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md transition"
+        >
+            Send
+        </button>
+    </div>
+</div>
+
+<script src="/main.js"></script>
+</body>
+</html>
